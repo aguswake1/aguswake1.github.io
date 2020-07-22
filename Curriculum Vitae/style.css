@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+header {
+    background-color: #5280c4;
+    color:white;
+    text-align:center;
+    margin: auto;
+}
+
+h1 {
+    display:inline-block;
+    width: 400px;
+    font-weight:bold;
+    padding:15px;
+}
+
+p {
+    display:inline-block;
+    width: 400px;
+    font-weight:200px;
+}
+
+.experience {
+    background-color: #53306b;
+    color:white;
+    text-align:center;
+    padding:10px;
+    margin: auto;
+}
+
+h3 {
+    font-size:36px;
+    font-weight:700px;
+}
