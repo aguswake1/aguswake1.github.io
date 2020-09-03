@@ -107,7 +107,8 @@ address{margin-top: 0;}
 }
 
 @media (min-height:550px){ /*Para las pantallas que superen los 550px*/
-    .content{height: 500px;}
+    #index{height: 500px;}
+    #BTY{height: 550px;}
 }
 
 img{max-width: 100%;} 
