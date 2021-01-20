@@ -1,37 +1,152 @@
-body {
-    font-family: Arial, Helvetica, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+/*--- navbar ---*/
+* {
+    font-family: 'Roboto', sans-serif;
+    box-sizing: border-box;
     margin: 0;
+    padding: 0;
 }
+
+li,
+a,
+#contact {
+    text-decoration: none;
+    color: #edf0f1;
+    font-weight: 100;
+    font-size: 1em;
+    margin-right: 10px;
+}
+
 
 header {
-    background-color: #5280c4;
-    color:white;
-    text-align:center;
-    margin: auto;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 1% 10%;
+    /*#1C0133*/
+    background-color: rgba(28, 1, 51, 0.739);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+    height: 100px;
+    color: white;
+    font-size: 120%;
 }
 
-h1 {
-    display:inline-block;
-    width: 400px;
-    font-weight:bold;
-    padding:15px;
+.logo {
+    cursor: pointer;
+    margin-right: auto;
+    margin-top: 0.5em;
+    border-radius: 18px;
+    border: 0.3px solid rgb(228, 212, 212);
+    width: 325px;
+    box-shadow: 0 6px 10px 0 rgba(200, 80, 80, 0.582),
+        0 0px 10px 0 rgba(200, 80, 80, 0.582);
+
 }
 
-p {
-    display:inline-block;
-    width: 400px;
-    font-weight:200px;
+.nav_links {
+    list-style: none;
 }
 
-.experience {
-    background-color: #53306b;
-    color:white;
-    text-align:center;
-    padding:10px;
-    margin: auto;
+.nav_links li {
+    display: inline-block;
+    padding: 1% 1.1em;
 }
 
-h3 {
-    font-size:36px;
-    font-weight:700px;
+.nav_links li a {
+    transition: all 0.4s ease 0s;
+}
+
+.nav_links li a:hover {
+    color: #07a7cf;
+}
+
+#contact {
+    padding: 9px 25px;
+    background-color: rgb(3, 148, 184);
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: all 0.35s ease 0s;
+    font-weight: bold;
+}
+
+#contact:hover {
+    background-color: rgba(48, 219, 48, 0.65);
+}
+
+/*-- content --*/
+
+
+
+/*-- responsive design --*/
+@media only screen and (max-width: 905px) {
+    .presentation {
+        background-color: lightblue;
+    }
+
+    nav {
+        background-color: red;
+    }
+
+
+    li,
+    a,
+    #contact {
+        display: inline-block;
+        font-size: 0.8em;
+    }
+
+    .logo {
+        width: 40%;
+    }
+}
+
+
+
+/*-- picture --*/
+
+.container {
+    position: relative;
+    width: 325px;
+}
+
+.image {
+    display: block;
+    width: 325px;
+
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #008CBA;
+    overflow: hidden;
+    width: 325px;
+
+    height: 0;
+    transition: .5s ease;
+}
+
+.container:hover .overlay {
+    height: 100%;
+}
+
+.text {
+    white-space: nowrap;
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    overflow: hidden;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
 }
