@@ -14,11 +14,8 @@ regresar.forEach(function(volver){
 
         // Antes de volver al home doy tiempo para que se ejecute la animación.
         setTimeout(function (){
-            location.href = "/Proyecto Taste";
+            location.href = "/index.html";
         },350)
-        
-        
-
         return false;
     });
 });
