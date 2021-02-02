@@ -14,7 +14,7 @@ regresar.forEach(function(volver){
 
         // Antes de volver al home doy tiempo para que se ejecute la animación.
         setTimeout(function (){
-            location.href = "/index.html";
+            location.href = "/tasteProject";
         },350)
         return false;
     });
