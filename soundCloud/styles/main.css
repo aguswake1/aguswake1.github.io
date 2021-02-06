@@ -15,7 +15,7 @@ body {
 }
 
 #soundcloud-player .col-left {
-	width: 20%;
+	width: fit-content;
 	height: 100%;
 	background-color: #292929;
 	overflow: auto;
@@ -26,6 +26,42 @@ body {
 
 	min-width: 200px;
 	z-index: 1;
+
+	/*La idea de esta parte es hacer lo mismo que hiciste de que 
+	vaya "apendeando" canciones de abajo hacia arriba pero sin JS
+	*/
+	display: block; 
+	flex-direction: column-reverse;
+
+	padding-inline: 20px;
+}
+
+/* Esto lo hice para jugar un poco con esa barra aburrido de los 90
+que tenias en la lista de canciones */
+
+/* TODO: Probar compatibilidad entre navegadores */
+
+.col-left::-webkit-scrollbar {
+    width: 15px;
+}
+.col-left::-webkit-scrollbar-button {
+    background: #ccc;
+    height:0;
+}
+.col-left::-webkit-scrollbar-track-piece {
+    background: #ccc;
+}
+.col-left::-webkit-scrollbar-thumb {
+    background: #ff5500;
+    border-radius: 1em;
+}
+
+.col-left *{
+
+	border-radius: 8px; /*Mira la publicación de Instagram con las border radius */
+	height: 20vh;
+	width: fit-content;
+	margin-bottom: 20px;
 }
 
 #soundcloud-player .col-right {
@@ -62,6 +98,7 @@ body {
 }
 
 #soundcloud-player .search-results {
+	display:flex;
 	justify-content: center;
 	margin-top: 30px;
 }
@@ -81,6 +118,7 @@ body {
 	background-color: white;
 	color: black;
 	border: 2px solid #4CAF50;
+	outline: 0;
 }
 
 .reset:hover {
