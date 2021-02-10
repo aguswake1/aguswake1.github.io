@@ -1,5 +1,11 @@
 /* 1. Search */
 
+$(".js-submit").click(function(){
+    const search = document.querySelector("input").value;
+    SoundCloudAPI.getTrack(search);
+});
+
+
 document.querySelector("input").addEventListener("keydown", (e) => {
     const search = document.querySelector("input").value;
     if (e.key == "Enter") {
@@ -7,10 +13,7 @@ document.querySelector("input").addEventListener("keydown", (e) => {
     }
 });
 
-document.querySelector(".js-submit").addEventListener("click", () => {
-    const search = document.querySelector("input").value;
-    SoundCloudAPI.getTrack(search);
-});
+
 
 /* 2. Query SoundCloud API */
 
@@ -43,17 +46,32 @@ SoundCloudAPI.renderTrack = function (tracks) {
     searchResults.innerHTML = "";
 
     tracks.forEach(element => {
-        console.log(element)
         // creating elements
-        var card = document.createElement("div");
-        var imageDiv = document.createElement("div");
-        var img = document.createElement("img");
-        var content = document.createElement("div");
-        var header = document.createElement("div");
-        var song = document.createElement("a");
-        var button = document.createElement("div");
-        var icon = document.createElement("i");
-        var add = document.createElement("span");
+        function createElement(name, type){
+            var name = document.createElement(type);
+            return name;
+        };
+
+        createElement('card','div');
+        createElement('imageDiv','div');
+        createElement('img','img');
+        createElement('content','div');
+        createElement('header','div');
+        createElement('song','a');
+        createElement('button','div');
+        createElement('icon','i');
+        createElement('add','span');
+
+
+        // var card = document.createElement("div");
+        // var imageDiv = document.createElement("div");
+        // var img = document.createElement("img");
+        // var content = document.createElement("div");
+        // var header = document.createElement("div");
+        // var song = document.createElement("a");
+        // var button = document.createElement("div");
+        // var icon = document.createElement("i");
+        // var add = document.createElement("span");
 
 
         // adding attributes
