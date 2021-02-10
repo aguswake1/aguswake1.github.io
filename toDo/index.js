@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    $("#list-items").html(localStorage.getItem("key"));
+    $("#list-items").html(localStorage.getItem("listItems"));
 
     $(".add-items").submit(function (event) {
         event.preventDefault();
@@ -8,7 +8,7 @@ $(document).ready(function () {
             console.log($(this));
             $("#list-items").fadeIn("default", function () {
                 $(this).append("<li class='listItem'><input type='checkbox' class='checkbox'>" + item + "<a class='remove'>x</a><hr></li>")
-                localStorage.setItem("key", $("#list-items").html());
+                localStorage.setItem("listItems", $("#list-items").html());
                 $("#todo-list-item").val("");
             });
 
@@ -23,13 +23,13 @@ $(document).ready(function () {
         }
 
         $(this).parent().toggleClass("completed");
-        localStorage.setItem("key", $("#list-items").html());
+        localStorage.setItem("listItems", $("#list-items").html());
 
     });
     $(document).on("click", ".remove", function () {
         $(this).parent().fadeOut("slow", function () {
             $(this).remove();
-            localStorage.setItem("key", $("#list-items").html());
+            localStorage.setItem("listItems", $("#list-items").html());
         });
     });
 });
