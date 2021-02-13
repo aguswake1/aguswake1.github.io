@@ -5,13 +5,9 @@ $(document).ready(function () {
         event.preventDefault();
         var item = $("#todo-list-item").val();
         if (item.trim() != "") {
-            console.log($(this));
-            $("#list-items").fadeIn("default", function () {
-                $(this).append("<li class='listItem'><input type='checkbox' class='checkbox'>" + item + "<a class='remove'>x</a><hr></li>")
-                localStorage.setItem("listItems", $("#list-items").html());
-                $("#todo-list-item").val("");
-            });
-
+            $("#list-items").append("<li class='listItem'><input type='checkbox' class='checkbox'>" + item + "<a class='remove'>x</a><hr></li>")
+            localStorage.setItem("listItems", $("#list-items").html());
+            $("#todo-list-item").val("");
         }
     });
 
