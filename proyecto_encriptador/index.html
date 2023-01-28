@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encriptador</title>
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="main.css">
+</head>
+
+<body>
+    <header>
+        <img src="img/Vector.png" alt="">
+    </header>
+    <main>
+        <section class="maquina">
+            <textarea placeholder="Ingrese el texto aqui" class="input-frase"></textarea>
+            <p class="restricciones"><img src="img/signo!.png" alt=""> Solo letras minúsculas y sin acentos</p>
+            <div class="accionar">
+                <button class="encriptar">Encriptar</button>
+                <button class="desencriptar">Desencriptar</button>
+            </div>
+        </section>
+        <aside>
+            <div class="not-found">
+                <img class="muneco" src="img/Muñeco.png" alt="">
+                <h2>Ningun mensaje fue encontrado</h2>
+                <p>Ingresa el texto que desees encriptar o desencriptar</p>
+                <button class="copiar" onclick="myFunction()">Copiar</button>
+            </div>
+        </aside>
+    </main>
+    <footer>
+        <img class="bandera" src="img/arg.png" alt="">
+        <p>Hecho Por Agustin Olano</p>
+    </footer>
+    <script src="./main.js"></script>
+</body>
+
+</html>
